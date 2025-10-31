@@ -41,7 +41,7 @@ with mss.mss() as sct:
 (
     ffmpeg
     .input('avc1.mp4')
-    .output('h264.mp4', vcodec='libx264', crf=28)
+    .output('h264.mp4', vcodec='libx264', crf=28) # crf: 0-51，越大压缩效率越高，h264默认23
     .overwrite_output()
     .run()
 )
